@@ -56,6 +56,8 @@ export default function Home() {
         </nav>
         {menuOpen && <div className="flex flex-col gap-5 border-t border-white/10 bg-black p-6 md:hidden">
           {links.map(link => <a key={link.name} href={link.href} onClick={() => setMenuOpen(false)}>{link.name}</a>)}
+          <a href="/login" onClick={() => setMenuOpen(false)} className="rounded-full border border-white/20 px-5 py-3 text-center">Login</a>
+          <a href="/register" onClick={() => setMenuOpen(false)} className="rounded-full bg-[#d4af37] px-5 py-3 text-center font-bold text-black">Create Account</a>
         </div>}
       </header>
 
